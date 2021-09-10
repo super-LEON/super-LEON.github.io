@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="google-site-verification" content="TZE0rZyIqLl10trYu3BWBWa1Vmz6HFwhb2OcNEK4u-s" />
+     <link rel="shortcut icon" href= /img/favicon.ico >
+    <title>
+        云芒的博客
+    </title>
+    <meta name="description" content= Zendu's Notes！ >
+    <meta name="keywords" content= Blog,IT,CS,Technology >
+    
+<link rel="stylesheet" href="/libs/highlight/styles/monokai-sublime.css">
+
+    
+<link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+<body id="bodyx">
+    <div class="hd posts">
+    <a href="/index.html"><i class="fa fa-home
+ replay-btn" aria-hidden="true"></i></a>
+    <div class="post-title">
+        <p>
+            CSS技巧
+        </p>
+        <hr>
+    </div>
+    <div class="post-content">
+        <h1 id="文本超出显示省略号"><a href="#文本超出显示省略号" class="headerlink" title="文本超出显示省略号"></a>文本超出显示省略号</h1><p>缺点：</p>
+<ol>
+<li>只能显示三个…</li>
+<li>省略号后面不能加展开符</li>
+</ol>
+<p>单行</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.text</span>&#123;</span><br><span class="line">  <span class="attribute">white-space</span>: no-wrap;</span><br><span class="line">  <span class="attribute">overflow</span>: hidden;</span><br><span class="line">  <span class="attribute">text-overflow</span>: ellipsis;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>多行</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.text</span>&#123;</span><br><span class="line">  <span class="attribute">overflow</span>: hidden; </span><br><span class="line">  <span class="attribute">display</span>: webkit-box; <span class="comment">/* 弹性盒子模型 */</span></span><br><span class="line">  <span class="attribute">-webkit-line-clamp</span>: <span class="number">2</span>; <span class="comment">/* 限制文本行数 */</span></span><br><span class="line">  <span class="attribute">-webkit-box-orient</span>: vertical; <span class="comment">/*排列方式*/</span></span><br><span class="line">  <span class="attribute">word-break</span>: break-all; </span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="滚动条"><a href="#滚动条" class="headerlink" title="滚动条"></a>滚动条</h1><p><img src="img/image-20210910173728332.png" alt="scroll"></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 整个滚动条 */</span></span><br><span class="line"><span class="selector-pseudo">::-webkit-scrollbar</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">5px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 滚动条的轨道 */</span></span><br><span class="line"><span class="selector-pseudo">::-webkit-scrollbar-track</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#f3efeb</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">5px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 滚动条的滑块 */</span></span><br><span class="line"><span class="selector-pseudo">::-webkit-scrollbar-thumb</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#7a7773</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">5px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h1 id="识别HTML中换行符"><a href="#识别HTML中换行符" class="headerlink" title="识别HTML中换行符"></a>识别HTML中换行符</h1><p>识别HTML String中的<code>\n</code>并换行</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">white-space</span>: <span class="selector-tag">pre-line</span>;</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="三角形"><a href="#三角形" class="headerlink" title="三角形"></a>三角形</h1><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.triangle</span>&#123; </span><br><span class="line">    <span class="comment">/* 指向上方的三角 */</span></span><br><span class="line">    <span class="attribute">width</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">border-top</span>: <span class="number">15px</span> solid transparent;</span><br><span class="line">    <span class="attribute">border-bottom</span>: <span class="number">35px</span> solid red;</span><br><span class="line">    <span class="attribute">border-left</span>: <span class="number">15px</span> solid transparent;</span><br><span class="line">    <span class="attribute">border-right</span>: <span class="number">15px</span> solid transparent;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h1 id="显示URL"><a href="#显示URL" class="headerlink" title="显示URL"></a>显示URL</h1><p>显示效果：</p>
+<blockquote>
+<p>「<a target="_blank" rel="noopener" href="https://www.baidu.com」/">https://www.baidu.com」</a></p>
+</blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:after</span>&#123;<span class="attribute">content</span>: <span class="string">&quot;「&quot;</span>  <span class="built_in">attr</span>(href) <span class="string">&quot;」&quot;</span> ;&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://www.baidu.com&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="input"><a href="#input" class="headerlink" title="input"></a>input</h1><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">input</span>&#123;</span><br><span class="line">    <span class="attribute">color</span>:  black;</span><br><span class="line">    <span class="attribute">caret-color</span>: red; <span class="comment">/* 光标颜色 */</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* 输入框字体格式 */</span> </span><br><span class="line"><span class="comment">/* webkit内核的浏览器 */</span></span><br><span class="line"><span class="selector-tag">input</span><span class="selector-pseudo">::-webkit-input-placeholder</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#c2c6ce</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* Firefox版本4-18 */</span></span><br><span class="line"><span class="selector-tag">input</span><span class="selector-pseudo">:-moz-placeholder</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#c2c6ce</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* Firefox版本19+ */</span></span><br><span class="line"><span class="selector-tag">input</span><span class="selector-pseudo">::-moz-placeholder</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#c2c6ce</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* IE浏览器 */</span></span><br><span class="line"><span class="selector-tag">input</span><span class="selector-pseudo">:-ms-input-placeholder</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#c2c6ce</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="兼容性处理"><a href="#兼容性处理" class="headerlink" title="兼容性处理"></a>兼容性处理</h1>
+    </div>
+
+    
+</div>
+    <div class="footer" id="footer">
+    <!-- <label class="el-switch el-switch-blue el-switch-sm" style="vertical-align: sub; position: absolute; bottom: 0; ">
+        <input type="checkbox" name="switch" id="update_style">
+        <span class="el-switch-style"></span>
+    </label> -->
+
+    <!--         <script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1278548644'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "v1.cnzz.com/stat.php%3Fid%3D1278548644%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+    </script> -->
+</p>
+</div>
+
+<input type="hidden" id="web_style" value="black">
+<input type="hidden" id="valine_appid" value="">
+<input type="hidden" id="valine_appKey" value="">
+
+<script src="/libs/jquery.min.js"></script>
+
+
+<script src="/libs/highlight/highlight.pack.js"></script>
+
+<!-- JS渲染 -->
+<script src='//cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js'></script>
+
+<script src="/js/js.js"></script>
+
+<style type="text/css">
+.v * {
+color: #698fca;
+}
+.v .vlist .vcard .vhead .vsys {
+color: #3a3e4a;
+}
+.v .vlist .vcard .vh .vmeta .vat {
+color: #638fd5;
+}
+.v .vlist .vcard .vhead .vnick {
+color: #6ba1ff;
+}
+.v a {
+color: #8696b1;
+}
+.v .vlist .vcard .vhead .vnick:hover {
+color: #669bfc;
+}
+</style>
+    <!-- <script type="text/javascript" color="173,174,173" opacity='1' zIndex="-2" count="99" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script> -->
+</body>
+</html>
