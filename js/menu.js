@@ -257,6 +257,7 @@ window.$menu = function (opts) {
 
 
 function observeItems() {
+    let menuWrapper = document.querySelectorAll(".cl-link");
     var io = new IntersectionObserver(
         entries => {
             let isInterSection = entries[0].isIntersecting;
@@ -265,7 +266,10 @@ function observeItems() {
             let menuElem = document.querySelector(`.cl-link-${idNum}`);
             // 进入屏幕的时候激活，退出屏幕的时候删除效果
             if(!menuElem) return;
-            isInterSection ? menuElem.classList.add('cl-link-active') : menuElem.classList.remove('cl-link-active');
+            if(isInterSection){
+                menuWrapper.forEach(v=>v.classList.remove('cl-link-active'));
+                isInterSection ? menuElem.classList.add('cl-link-active') : null;
+            }
         }
     );
     Array.from(document.getElementsByClassName("headings")).forEach(item => io.observe(item));

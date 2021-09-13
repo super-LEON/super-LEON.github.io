@@ -4,8 +4,13 @@
     width: 200px;
     padding: 20px 0;
     height: auto;
-    /* background-color: #696969; */
     transition: all .3s ease-in-out;
+}
+.cl-link {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 

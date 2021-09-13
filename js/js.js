@@ -88,7 +88,7 @@ function initMenu() {
                 new $menu({
                     contentEl: 'content-wrapper',
                     catalogEl: `menu-wrapper`,
-                    selector: ['h1', 'h2'],
+                    selector: ['h1', 'h2','h3','h4','h5'],
                     cool: false,
                 })
                 menubtn.setAttribute("status", "open");
