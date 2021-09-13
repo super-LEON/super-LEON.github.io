@@ -30,6 +30,8 @@ a:hover {
   width: 55%;
   height: 100%;
   margin: auto;
+  cursor: pointer;
+  user-select: none;
 }
 .logodiv {
   text-align: center;
@@ -170,7 +172,9 @@ a {
 }
 .title-wrapper .post-title {
   text-align: center;
-  font-size: 24px;
+}
+.title-wrapper .post-title p {
+  font-size: 30px;
 }
 .title-wrapper .menu-btn {
   display: flex;

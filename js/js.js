@@ -8,7 +8,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
         hljs.highlightBlock(block);
     });
 
-    bindEvent();
+    if (window.location.pathname === "/" || window.location.pathname === "/index.html") {
+        bindTitleClick();
+        return;
+    } else {
+        bindEvent();
+    }
+
 });
 
 function setCookie(key, value) {
@@ -64,19 +70,20 @@ function bindEvent() {
     bodyEvt();
 }
 
-function initMenu(){
+function initMenu() {
+
     // 小屏幕，需要绑定事件
     let menubtn = document.querySelector(".menu-btn");
     let menuContent = document.querySelector(".menu-wrapper");
-    if(window.innerWidth < 1000){
-        menubtn.onclick = function(e){
+    if (window.innerWidth < 1000) {
+        menubtn.onclick = function (e) {
             e.stopPropagation();
             console.log("menu button clicked!");
-            if(menubtn.getAttribute("status") === "open"){
+            if (menubtn.getAttribute("status") === "open") {
                 menuContent.innerHTML = '';
                 menuContent.style.left = '-100%';
-                menubtn.setAttribute("status","close");
-            }else{
+                menubtn.setAttribute("status", "close");
+            } else {
                 menuContent.style.left = '0';
                 new $menu({
                     contentEl: 'content-wrapper',
@@ -84,29 +91,51 @@ function initMenu(){
                     selector: ['h1', 'h2'],
                     cool: false,
                 })
-                menubtn.setAttribute("status","open");
+                menubtn.setAttribute("status", "open");
             }
 
         }
-    }else{
+    } else {
         new $menu({
             contentEl: 'content-wrapper',
             catalogEl: `menu-wrapper`,
-            selector: ['h1', 'h2']
+            selector: ['h1', 'h2','h3','h4','h5']
         });
         menubtn.style.opacity = '0';
     }
 }
 
-function bodyEvt(){
+function bodyEvt() {
     let bd = document.querySelector(".hd.posts")
-    bd.addEventListener('click',bdc);
+    bd.addEventListener('click', bdc);
 }
 
 
-const bdc = e=>{
+const bdc = e => {
     let menubtn = document.querySelector(".menu-btn");
-    if(window.innerWidth < 1000 && menubtn.getAttribute('status') === "open"){
+    if (window.innerWidth < 1000 && menubtn.getAttribute('status') === "open") {
         menubtn.click();
     }
+}
+
+
+const bindTitleClick = _ => {
+    let titleEle = document.querySelector(".logot .title-text");
+    let novelEle = document.querySelector(".hd.novel");
+    let itEle = document.querySelector(".hd.it");
+
+    titleEle.addEventListener('click', e => {
+        if (!titleEle) return;
+        if (titleEle.getAttribute("J") == "false") {
+            novelEle.style.display = "block";
+            itEle.style.display = "none";
+            titleEle.innerHTML = "云芒 - N"
+            titleEle.setAttribute("J", "true");
+        } else {
+            novelEle.style.display = "none";
+            itEle.style.display = "block";
+            titleEle.innerHTML = "云芒 - T"
+            titleEle.setAttribute("J", "false");
+        }
+    })
 }

@@ -259,12 +259,12 @@ window.$menu = function (opts) {
 function observeItems() {
     var io = new IntersectionObserver(
         entries => {
-            console.log(entries);
             let isInterSection = entries[0].isIntersecting;
             let target = entries[0].target;
             let idNum = target.id.split('-').pop();
             let menuElem = document.querySelector(`.cl-link-${idNum}`);
             // 进入屏幕的时候激活，退出屏幕的时候删除效果
+            if(!menuElem) return;
             isInterSection ? menuElem.classList.add('cl-link-active') : menuElem.classList.remove('cl-link-active');
         }
     );
