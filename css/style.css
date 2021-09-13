@@ -69,7 +69,7 @@ a:hover {
 }
 .logot {
   font-weight: bold;
-  font-size: 45px;
+  font-size: 40px;
   margin-top: 10px;
   margin-bottom: 20px;
   display: flex;
@@ -143,12 +143,6 @@ li {
 a {
   font-size: 20px;
 }
-.post-title {
-  text-align: center;
-  font-size: 24px;
-  line-height: 40px;
-  margin-bottom: 10px;
-}
 .post-content a {
   color: #699be9;
 }
@@ -162,6 +156,38 @@ a {
 .highlight .code .hljs {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
+}
+.title-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.title-wrapper a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.title-wrapper .post-title {
+  text-align: center;
+  font-size: 24px;
+}
+.title-wrapper .menu-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: #696969;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+.title-wrapper .menu-btn i {
+  font-size: 17px;
+}
+.gutter .hljs span.line {
+  display: none;
 }
 .post-content .octicon {
   display: inline-block;
@@ -1263,9 +1289,6 @@ label.el-checkbox {
   .hd {
     width: 90%;
     margin: auto;
-  }
-  .posts .replay-btn {
-    display: none;
   }
   .posttime {
     display: none;
