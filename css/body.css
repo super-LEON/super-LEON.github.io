@@ -1,0 +1,20 @@
+/* 标题下划线 */
+.hd .list {
+    position: relative;
+}
+.hd .list::after {
+    content: '';
+    position: absolute;
+    width: 80%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: 0;
+    left: 4%;
+    background-color: #F68657;
+    transform-origin: bottom right;
+    transition: transform .8s ease-out;
+}
+.hd .list:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
