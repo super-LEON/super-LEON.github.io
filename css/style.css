@@ -892,9 +892,6 @@ a {
   -moz-tab-size: 12;
   tab-size: 12;
 }
-.post-content .task-list-item {
-  list-style-type: none;
-}
 .post-content .task-list-item+.task-list-item {
   margin-top: 3px;
 }
