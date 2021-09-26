@@ -75,6 +75,9 @@ function initMenu() {
     // 小屏幕，需要绑定事件
     let menubtn = document.querySelector(".menu-btn");
     let menuContent = document.querySelector(".menu-wrapper");
+    
+    if (menuContent && menubtn) { } else { return; }
+
     if (window.innerWidth < 1000) {
         menubtn.onclick = function (e) {
             e.stopPropagation();
@@ -88,7 +91,7 @@ function initMenu() {
                 new $menu({
                     contentEl: 'content-wrapper',
                     catalogEl: `menu-wrapper`,
-                    selector: ['h1', 'h2','h3','h4','h5'],
+                    selector: ['h1', 'h2', 'h3', 'h4', 'h5'],
                     cool: false,
                 })
                 menubtn.setAttribute("status", "open");
@@ -99,7 +102,7 @@ function initMenu() {
         new $menu({
             contentEl: 'content-wrapper',
             catalogEl: `menu-wrapper`,
-            selector: ['h1', 'h2','h3','h4','h5']
+            selector: ['h1', 'h2', 'h3', 'h4', 'h5']
         });
         menubtn.style.opacity = '0';
     }
@@ -144,13 +147,13 @@ const bindTitleClick = _ => {
 
 // sharejs
 
-function share(){
+function share() {
     let shareBtn = document.querySelector("#share .social-share");
-    if(!shareBtn) return;
+    if (!shareBtn) return;
     let titleElement = document.querySelector(".title-wrapper .post-title p");
-    if(!titleElement) return;
+    if (!titleElement) return;
     let titleText = titleElement.innerHTML;
-    shareBtn.setAttribute("data-description",`云芒的博客： ${titleText}`);
+    shareBtn.setAttribute("data-description", `云芒的博客： ${titleText}`);
     console.log(titleText);
 }
 
