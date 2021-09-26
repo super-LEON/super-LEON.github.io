@@ -103,7 +103,7 @@ function initMenu() {
             catalogEl: `menu-wrapper`,
             selector: ['h1', 'h2', 'h3', 'h4', 'h5']
         });
-        menubtn.style.opacity = '0';
+        // menubtn.style.opacity = '0';
     }
 }
 
