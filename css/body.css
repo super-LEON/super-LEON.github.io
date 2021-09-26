@@ -15,6 +15,7 @@
     font-weight: 200;
     user-select: text;
     cursor: auto;
+
 }
 
 #content-wrapper p {
@@ -27,4 +28,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#share  {
+    position: fixed;
+    right: 30px;
+    bottom: 0;
+    
+}
+
+#share .social-share {
+    display: flex;
+    flex-direction: column;
 }
