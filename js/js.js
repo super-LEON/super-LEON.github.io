@@ -76,9 +76,8 @@ function initMenu() {
     let menubtn = document.querySelector(".menu-btn");
     let menuContent = document.querySelector(".menu-wrapper");
     
-    if (menuContent && menubtn) { } else { return; }
-
-    if (window.innerWidth < 1000) {
+    if (window.innerWidth < 1000)  {
+        return;
         menubtn.onclick = function (e) {
             e.stopPropagation();
             console.log("menu button clicked!");
