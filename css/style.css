@@ -172,6 +172,7 @@ a {
 }
 .title-wrapper .post-title {
   text-align: center;
+  white-space: nowrap;
 }
 .title-wrapper .post-title p {
   font-size: 1rem;
