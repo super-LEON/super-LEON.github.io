@@ -43,8 +43,9 @@
 }
 
 @media screen and (max-width: 768px) {
-    #content-wrapper {
+    #content-wrapper, p,li {
         width: 86%;
+        font-size: 0.8rem !important;
     }
     #share {
         right: 0px;

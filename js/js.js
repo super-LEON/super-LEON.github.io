@@ -158,3 +158,12 @@ function share() {
 }
 
 share();
+
+
+function initREM(){
+    let htmlElement = document.querySelector("html");
+    let winWidth = window.innerWidth;
+    htmlElement.style.fontSize = winWidth / 100;
+}
+
+initREM();
