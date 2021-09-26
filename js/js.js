@@ -167,3 +167,8 @@ function initREM(){
 }
 
 initREM();
+
+
+function goHome(){
+    let gohomeElement = document.querySelector("#gohome");
+}
