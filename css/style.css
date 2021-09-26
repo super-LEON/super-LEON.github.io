@@ -706,7 +706,6 @@ a {
 .post-content li {
   word-wrap: break-all;
   font-weight: inherit;
-  list-style-type: square;
 }
 .post-content li>p {
   margin-top: 16px;
