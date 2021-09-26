@@ -151,4 +151,7 @@ function share(){
     if(!titleElement) return;
     let titleText = titleElement.innerHTML;
     shareBtn.setAttribute("data-description",`云芒的博客： ${titleText}`);
+    console.log(titleText);
 }
+
+share();
