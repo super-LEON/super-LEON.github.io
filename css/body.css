@@ -8,3 +8,23 @@
     overflow: hidden;
     z-index: 100;
 }
+
+
+#content-wrapper {
+    font-size: 16px;
+    font-weight: 200;
+    user-select: text;
+    cursor: auto;
+}
+
+#content-wrapper p {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+#share {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

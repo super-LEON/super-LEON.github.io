@@ -139,3 +139,16 @@ const bindTitleClick = _ => {
         }
     })
 }
+
+
+
+// sharejs
+
+function share(){
+    let shareBtn = document.querySelector("#share .social-share");
+    if(!shareBtn) return;
+    let titleElement = document.querySelector(".title-wrapper .post-title");
+    if(!titleElement) return;
+    let titleText = titleElement.innerHTML;
+    shareBtn.setAttribute("data-description",`云芒的博客： ${titleText}`);
+}
