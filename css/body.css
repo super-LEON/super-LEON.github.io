@@ -41,3 +41,12 @@
     display: flex;
     flex-direction: column;
 }
+
+@media screen and (max-width: 768px) {
+    #content-wrapper {
+        width: 86%;
+    }
+    #share {
+        right: 0px;
+    }
+}

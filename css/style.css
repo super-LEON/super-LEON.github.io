@@ -174,7 +174,7 @@ a {
   text-align: center;
 }
 .title-wrapper .post-title p {
-  font-size: 30px;
+  font-size: 20px;
 }
 .title-wrapper .menu-btn {
   display: flex;
@@ -1299,11 +1299,6 @@ label.el-checkbox {
   }
   .posttime {
     display: none;
-  }
-  .posts .post-title {
-    font-size: 16px;
-    border-bottom: 1px solid #ccc;
-    margin-bottom: 50px;
   }
   .postname {
     overflow: hidden;
