@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
     });
 
     if (window.location.pathname === "/" || window.location.pathname === "/index.html") {
-        bindTitleClick();
         return;
     } else {
         bindEvent();
@@ -118,28 +117,6 @@ const bdc = e => {
     if (window.innerWidth < 1000 && menubtn.getAttribute('status') === "open") {
         menubtn.click();
     }
-}
-
-
-const bindTitleClick = _ => {
-    let titleEle = document.querySelector(".logot .title-text");
-    let novelEle = document.querySelector(".hd.novel");
-    let itEle = document.querySelector(".hd.it");
-
-    titleEle.addEventListener('click', e => {
-        if (!titleEle) return;
-        if (titleEle.getAttribute("J") == "false") {
-            novelEle.style.display = "block";
-            itEle.style.display = "none";
-            titleEle.innerHTML = "云芒 - N"
-            titleEle.setAttribute("J", "true");
-        } else {
-            novelEle.style.display = "none";
-            itEle.style.display = "block";
-            titleEle.innerHTML = "云芒 - T"
-            titleEle.setAttribute("J", "false");
-        }
-    })
 }
 
 
