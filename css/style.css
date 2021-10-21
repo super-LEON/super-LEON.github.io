@@ -608,7 +608,7 @@ code {
   z-index: 10;
   display: block !important;
   opacity: 1;
-  height: 150px;
+/*height: 150px;*/
 }
 @-moz-keyframes showBlock {
   0% {
@@ -617,7 +617,7 @@ code {
   }
   100% {
     opacity: 1;
-    height: 164px;
+/* height: 164px;*/
   }
 }
 @-webkit-keyframes showBlock {
@@ -627,7 +627,7 @@ code {
   }
   100% {
     opacity: 1;
-    height: 164px;
+/* height: 164px;*/
   }
 }
 @-o-keyframes showBlock {
@@ -637,7 +637,7 @@ code {
   }
   100% {
     opacity: 1;
-    height: 164px;
+/* height: 164px;*/
   }
 }
 @keyframes showBlock {
@@ -647,13 +647,13 @@ code {
   }
   100% {
     opacity: 1;
-    height: 164px;
+/* height: 164px;*/
   }
 }
 @-moz-keyframes hideBlock {
   0% {
     opacity: 1;
-    height: 164px;
+/* height: 164px;*/
   }
   100% {
     opacity: 0;
@@ -663,7 +663,7 @@ code {
 @-webkit-keyframes hideBlock {
   0% {
     opacity: 1;
-    height: 164px;
+/* height: 164px;*/
   }
   100% {
     opacity: 0;
@@ -673,7 +673,7 @@ code {
 @-o-keyframes hideBlock {
   0% {
     opacity: 1;
-    height: 164px;
+/* height: 164px;*/
   }
   100% {
     opacity: 0;
@@ -683,7 +683,7 @@ code {
 @keyframes hideBlock {
   0% {
     opacity: 1;
-    height: 164px;
+/* height: 164px;*/
   }
   100% {
     opacity: 0;
